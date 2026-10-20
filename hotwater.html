@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>給湯器（お湯） | ホテルビューロー四天王寺</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+  --ground:#A7B8C3; --card:#FFFFFF; --ink:#2F3A40; --sub:#4A555B; --rule:#D5DDE2;
+  --soft:#F3F6F7; --step:#5E7787; --stepInk:#FFFFFF; --warn:#A3461F; --ok:#2F6E8E;
+  --tab:#FFFFFF; --tabInk:#2F3A40; --tabOn:#2F3A40; --tabOnInk:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#1D262C; --card:#283339; --ink:#E7EDF0; --sub:#B7C3CA; --rule:#3D4A52;
+    --soft:#313D44; --step:#8FAABA; --stepInk:#14202A; --warn:#F0956E; --ok:#8CC4E0;
+    --tab:#283339; --tabInk:#E7EDF0; --tabOn:#DCE6EB; --tabOnInk:#1D262C;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#1D262C; --card:#283339; --ink:#E7EDF0; --sub:#B7C3CA; --rule:#3D4A52;
+  --soft:#313D44; --step:#8FAABA; --stepInk:#14202A; --warn:#F0956E; --ok:#8CC4E0;
+  --tab:#283339; --tabInk:#E7EDF0; --tabOn:#DCE6EB; --tabOnInk:#1D262C;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--ground)}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;line-height:1.6;-webkit-text-size-adjust:100%}
+body.ko{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic','Noto Sans JP',sans-serif}
+body.zh{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans JP',sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:16px 16px 40px}
+.langs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.langs button,.tabs button{font:inherit;border:0;cursor:pointer;min-height:44px;border-radius:6px;
+  background:var(--tab);color:var(--tabInk);font-size:14px;font-weight:500;padding:6px 4px}
+.langs button[aria-pressed="true"],.tabs button[aria-selected="true"]{background:var(--tabOn);color:var(--tabOnInk);font-weight:700}
+button:focus-visible{outline:3px solid #F2B84B;outline-offset:2px}
+header{display:flex;align-items:center;gap:14px;margin:22px 0 16px}
+.icon{width:64px;height:64px;background:var(--card);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.icon svg{width:38px;height:38px;stroke:var(--ink)}
+h1{margin:0;font-size:24px;line-height:1.3;letter-spacing:.03em}
+.where{font-size:14px;color:var(--ink);opacity:.85}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:14px}
+.card{background:var(--card);padding:18px 18px 20px;margin-bottom:12px}
+h2{margin:0 0 12px;font-size:17px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.btn{display:flex;gap:12px;align-items:center;padding:8px 0}
+.chip{width:56px;height:56px;flex-shrink:0;display:flex;align-items:center;justify-content:center;text-align:center;
+  font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;line-height:1.15;color:#1F2A30;background:#E4E8EB;border-radius:50%;box-sizing:border-box}
+.chip.sq{border-radius:8px}
+.bname{font-weight:700;font-size:15px}
+.bdesc{font-size:14px;color:var(--sub)}
+.note{font-size:13px;background:var(--soft);padding:10px 12px;margin-top:10px;color:var(--sub)}
+ol{list-style:none;margin:0;padding:0;counter-reset:s}
+ol li{counter-increment:s;display:flex;gap:12px;font-size:15px;padding:6px 0}
+ol li::before{content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--step);color:var(--stepInk);
+  font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.mark{display:flex;gap:12px;font-size:15px;padding:6px 0}
+.mark span{width:28px;height:28px;border-radius:50%;border:2px solid;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.mark.ok span{color:var(--ok)} .mark.ng span{color:var(--warn)}
+.warn{display:flex;gap:12px;align-items:flex-start;font-size:14px}
+.warn b{color:var(--warn);flex-shrink:0}
+footer{font-size:13px;text-align:center;margin-top:18px;color:var(--ink)}
+
+.fac{font-size:13px;letter-spacing:.06em;opacity:.85}
+.hubgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.hubgrid a{background:var(--card);color:var(--ink);text-decoration:none;padding:18px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:700;font-size:15px;text-align:center;min-height:44px}
+.hubgrid a svg{width:40px;height:40px;stroke:var(--ink)}
+.backlink{display:inline-block;margin-top:14px;color:var(--ink);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="langs" role="group" aria-label="Language">
+    <button data-lang="ja">日本語</button><button data-lang="en">English</button><button data-lang="zh">中文</button><button data-lang="ko">한국어</button>
+  </div>
+  <header>
+    <div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14h18a4 4 0 0 1 4 4v4"/><path d="M28 22h8"/><path d="M14 14V9h8v5"/><path d="M12 9h12"/><path d="M34 27v3"/><path d="M30 30v3"/><path d="M38 30v3"/><path d="M34 34v3"/><path d="M6 40h36"/></svg></div>
+    <div><div class="fac">ホテルビューロー四天王寺</div><h1 id="title"></h1></div>
+  </header>
+  <main id="main"></main>
+  <footer id="foot"></footer>
+</div>
+<script>
+var FAC="ホテルビューロー四天王寺";
+var UI={"ja": {"btns": "ボタンの役割", "warn": "ご注意", "ok": "使える", "ng": "使えない", "trouble": "こんな時は", "foot": "ご不明な点はフロントまでお問い合わせください。", "hub": "設備の使い方", "back": "設備一覧へ"}, "en": {"btns": "What each button does", "warn": "Caution", "ok": "OK", "ng": "Not OK", "trouble": "If something goes wrong", "foot": "If you have any questions, please contact the front desk.", "hub": "How to use the room equipment", "back": "All equipment"}, "zh": {"btns": "按鍵說明", "warn": "注意", "ok": "可使用", "ng": "不可使用", "trouble": "遇到問題時", "foot": "如有任何疑問，請聯絡櫃台。", "hub": "房內設備使用說明", "back": "設備一覽"}, "ko": {"btns": "버튼 설명", "warn": "주의", "ok": "사용 가능", "ng": "사용 불가", "trouble": "이럴 때는", "foot": "궁금한 점은 프런트로 문의해 주세요.", "hub": "객실 설비 사용법", "back": "설비 목록"}};
+var CHIPS={"w_pow": ["電源", "background:#E4E8EB", 1], "w_course": ["コース", "background:#E4E8EB;font-size:12px", 1], "w_start": ["スタート", "background:#8DBACB;font-size:11px", 1], "m_heat": ["暖房", "background:#E8ECEE;font-size:15px", 0], "m_dry": ["衣類<br>乾燥", "background:#E8ECEE", 0], "m_mist": ["ミスト<br>サウナ", "background:#E8ECEE;font-size:11px", 0], "m_vent": ["換気", "background:#E8ECEE;font-size:15px", 0], "m_time": ["▲<br>▼", "background:#E8ECEE", 0], "m_stop": ["停止", "background:#E8ECEE;font-size:15px", 0], "g_pow": ["運転<br>入/切", "background:#EFEBDD", 1], "g_auto": ["自動", "background:#EFEBDD;font-size:15px", 1], "g_talk": ["通話", "background:#EFEBDD;font-size:15px", 1]};
+var DATA={"ja": {"title": "給湯器（お湯）", "btns": [["g_pow", "運転 入/切", "電源です。「入」にするとお湯が使えます。"], ["g_auto", "自動", "ボタンひとつで浴槽にお湯をため、保温します。"], ["g_talk", "通話", "押している間、浴室と会話ができます。"]], "note": "お湯の温度は浴室のリモコンでも変更できます。浴室暖房乾燥機・ミストサウナを使う時も「運転」を入にしてください。", "sections": [["シャワー・蛇口のお湯", ["<b>運転</b>を押して「入」にします。", "画面で温度を確認します。シャワーは40℃前後が目安です。", "蛇口・シャワーを開けます。お湯が出るまで少しお待ちください。"]], ["お風呂にお湯をはる", ["浴槽の<b>栓</b>がしっかり閉まっているか確認します。", "<b>自動</b>を押します。", "お湯がたまると音声でお知らせし、そのまま保温します。止める時はもう一度<b>自動</b>を押します。"]]], "warn": "やけど防止のため、シャワー・入浴の前に必ず手でお湯の温度をお確かめください。"}, "en": {"title": "Water heater (hot water)", "btns": [["g_pow", "運転 Power on/off", "Turns the water heater on. Hot water is available when it is on."], ["g_auto", "自動 Auto bath", "Fills the bathtub and keeps it warm with one touch."], ["g_talk", "通話 Intercom", "Hold to talk with someone in the bathroom."]], "note": "You can also change the temperature with the bathroom panel. Keep 運転 (Power) on when using the bathroom heater or mist sauna.", "sections": [["Shower and taps", ["Press <b>運転</b> (Power) to turn it on.", "Check the temperature on the screen. About 40°C is comfortable for a shower.", "Open the tap or shower. Wait a moment for the water to warm up."]], ["Filling the bathtub", ["Make sure the bathtub <b>plug</b> is firmly closed.", "Press <b>自動</b> (Auto bath).", "A voice tells you when it is full, and the water is kept warm. Press <b>自動</b> again to stop."]]], "warn": "To avoid burns, always check the water temperature with your hand before showering or bathing."}, "zh": {"title": "熱水器（熱水）", "btns": [["g_pow", "運転 電源 開/關", "開啟熱水器，開啟後即可使用熱水。"], ["g_auto", "自動 自動放水", "一鍵將熱水放入浴缸並保溫。"], ["g_talk", "通話 對講", "按住即可與浴室內的人通話。"]], "note": "也可以用浴室的控制面板變更溫度。使用浴室暖氣或霧氣三溫暖時，請保持「運転」開啟。", "sections": [["淋浴・水龍頭", ["按下<b>「運転」</b>開啟電源。", "在螢幕上確認溫度，淋浴建議約40°C。", "打開水龍頭或蓮蓬頭，稍等片刻即會出熱水。"]], ["浴缸放熱水", ["確認浴缸<b>塞子</b>已塞緊。", "按下<b>「自動」</b>。", "放滿時會以語音提示並自動保溫。如需停止，請再按一次<b>「自動」</b>。"]]], "warn": "為避免燙傷，淋浴或入浴前請務必用手確認水溫。"}, "ko": {"title": "온수기 (온수)", "btns": [["g_pow", "運転 전원 켜기/끄기", "온수기 전원을 켭니다. 켜져 있으면 온수를 사용할 수 있습니다."], ["g_auto", "自動 자동 물 받기", "버튼 하나로 욕조에 물을 받고 보온합니다."], ["g_talk", "通話 통화", "누르고 있는 동안 욕실과 대화할 수 있습니다."]], "note": "욕실 리모컨에서도 온도를 바꿀 수 있습니다. 욕실 난방이나 미스트 사우나를 쓸 때도 「運転」을 켜 두세요.", "sections": [["샤워·수도", ["<b>「運転」</b>을 눌러 전원을 켭니다.", "화면에서 온도를 확인합니다. 샤워는 40℃ 전후가 적당합니다.", "수도꼭지나 샤워기를 엽니다. 온수가 나올 때까지 잠시 기다려 주세요."]], ["욕조에 물 받기", ["욕조 <b>마개</b>가 잘 닫혀 있는지 확인합니다.", "<b>「自動」</b>를 누릅니다.", "물이 차면 음성으로 알려 주고 그대로 보온합니다. 멈추려면 <b>「自動」</b>를 한 번 더 누릅니다."]]], "warn": "화상 방지를 위해 샤워·입욕 전에 반드시 손으로 물 온도를 확인해 주세요."}};
+
+var st={lang:'ja'};
+function pick(){var h=(location.hash||'').replace('#','');if(UI[h]){st.lang=h;return;}
+ try{var s=localStorage.getItem('guide-lang');if(UI[s]){st.lang=s;return;}}catch(e){}
+ var n=(navigator.language||'ja').toLowerCase();
+ st.lang=n.indexOf('ja')===0?'ja':n.indexOf('zh')===0?'zh':n.indexOf('ko')===0?'ko':'en';}
+function setLangUI(){document.documentElement.lang={ja:'ja',en:'en',zh:'zh-Hant',ko:'ko'}[st.lang];
+ document.body.className=st.lang;
+ document.querySelectorAll('.langs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===st.lang)});}
+document.querySelector('.langs').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;st.lang=b.dataset.lang;try{localStorage.setItem('guide-lang',st.lang)}catch(x){}render();});
+
+function chip(k){var c=CHIPS[k];return '<div class="chip'+(c[2]?' sq':'')+'" style="'+c[1]+'" aria-hidden="true">'+c[0]+'</div>';}
+function render(){setLangUI();var u=UI[st.lang],d=DATA[st.lang];
+ document.getElementById('title').textContent=d.title;
+ document.title=d.title+' | '+FAC;
+ var h='';
+ if(d.btns){h+='<section class="card"><h2>'+u.btns+'</h2>'+d.btns.map(function(b){return '<div class="btn">'+chip(b[0])+'<div><div class="bname">'+b[1]+'</div><div class="bdesc">'+b[2]+'</div></div></div>'}).join('')+(d.note?'<div class="note">'+d.note+'</div>':'')+'</section>';}
+ h+=d.sections.map(function(s){return '<section class="card"><h2>'+s[0]+'</h2><ol>'+s[1].map(function(x){return '<li><div>'+x+'</div></li>'}).join('')+'</ol></section>'}).join('');
+ if(!d.btns&&d.note){h+='<section class="card"><div class="note" style="margin-top:0">'+d.note+'</div></section>';}
+ if(d.marks){h+='<section class="card"><h2>'+d.marksTitle+'</h2><div class="mark ok"><span aria-label="'+u.ok+'">○</span><div>'+d.marks[0]+'</div></div><div class="mark ng"><span aria-label="'+u.ng+'">×</span><div>'+d.marks[1]+'</div></div></section>';}
+ if(d.trouble){h+='<section class="card"><h2>'+u.trouble+'</h2>'+d.trouble.map(function(t){return '<div class="mark"><span style="border-color:var(--step);color:var(--step)">?</span><div>'+t+'</div></div>'}).join('')+'</section>';}
+ h+='<section class="card warn"><b>'+u.warn+'</b><div>'+d.warn+'</div></section>';
+ document.getElementById('main').innerHTML=h;
+ document.getElementById('foot').innerHTML=u.foot+'<br><a class="backlink" href="./index.html">← '+u.back+'</a>';}
+pick();render();
+</script>
+</body>
+</html>

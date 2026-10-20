@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>浴室暖房乾燥機 | ホテルビューロー四天王寺</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+  --ground:#A7B8C3; --card:#FFFFFF; --ink:#2F3A40; --sub:#4A555B; --rule:#D5DDE2;
+  --soft:#F3F6F7; --step:#5E7787; --stepInk:#FFFFFF; --warn:#A3461F; --ok:#2F6E8E;
+  --tab:#FFFFFF; --tabInk:#2F3A40; --tabOn:#2F3A40; --tabOnInk:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#1D262C; --card:#283339; --ink:#E7EDF0; --sub:#B7C3CA; --rule:#3D4A52;
+    --soft:#313D44; --step:#8FAABA; --stepInk:#14202A; --warn:#F0956E; --ok:#8CC4E0;
+    --tab:#283339; --tabInk:#E7EDF0; --tabOn:#DCE6EB; --tabOnInk:#1D262C;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#1D262C; --card:#283339; --ink:#E7EDF0; --sub:#B7C3CA; --rule:#3D4A52;
+  --soft:#313D44; --step:#8FAABA; --stepInk:#14202A; --warn:#F0956E; --ok:#8CC4E0;
+  --tab:#283339; --tabInk:#E7EDF0; --tabOn:#DCE6EB; --tabOnInk:#1D262C;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--ground)}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;line-height:1.6;-webkit-text-size-adjust:100%}
+body.ko{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic','Noto Sans JP',sans-serif}
+body.zh{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans JP',sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:16px 16px 40px}
+.langs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.langs button,.tabs button{font:inherit;border:0;cursor:pointer;min-height:44px;border-radius:6px;
+  background:var(--tab);color:var(--tabInk);font-size:14px;font-weight:500;padding:6px 4px}
+.langs button[aria-pressed="true"],.tabs button[aria-selected="true"]{background:var(--tabOn);color:var(--tabOnInk);font-weight:700}
+button:focus-visible{outline:3px solid #F2B84B;outline-offset:2px}
+header{display:flex;align-items:center;gap:14px;margin:22px 0 16px}
+.icon{width:64px;height:64px;background:var(--card);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.icon svg{width:38px;height:38px;stroke:var(--ink)}
+h1{margin:0;font-size:24px;line-height:1.3;letter-spacing:.03em}
+.where{font-size:14px;color:var(--ink);opacity:.85}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:14px}
+.card{background:var(--card);padding:18px 18px 20px;margin-bottom:12px}
+h2{margin:0 0 12px;font-size:17px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.btn{display:flex;gap:12px;align-items:center;padding:8px 0}
+.chip{width:56px;height:56px;flex-shrink:0;display:flex;align-items:center;justify-content:center;text-align:center;
+  font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;line-height:1.15;color:#1F2A30;background:#E4E8EB;border-radius:50%;box-sizing:border-box}
+.chip.sq{border-radius:8px}
+.bname{font-weight:700;font-size:15px}
+.bdesc{font-size:14px;color:var(--sub)}
+.note{font-size:13px;background:var(--soft);padding:10px 12px;margin-top:10px;color:var(--sub)}
+ol{list-style:none;margin:0;padding:0;counter-reset:s}
+ol li{counter-increment:s;display:flex;gap:12px;font-size:15px;padding:6px 0}
+ol li::before{content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--step);color:var(--stepInk);
+  font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.mark{display:flex;gap:12px;font-size:15px;padding:6px 0}
+.mark span{width:28px;height:28px;border-radius:50%;border:2px solid;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.mark.ok span{color:var(--ok)} .mark.ng span{color:var(--warn)}
+.warn{display:flex;gap:12px;align-items:flex-start;font-size:14px}
+.warn b{color:var(--warn);flex-shrink:0}
+footer{font-size:13px;text-align:center;margin-top:18px;color:var(--ink)}
+
+.fac{font-size:13px;letter-spacing:.06em;opacity:.85}
+.hubgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.hubgrid a{background:var(--card);color:var(--ink);text-decoration:none;padding:18px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:700;font-size:15px;text-align:center;min-height:44px}
+.hubgrid a svg{width:40px;height:40px;stroke:var(--ink)}
+.backlink{display:inline-block;margin-top:14px;color:var(--ink);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="langs" role="group" aria-label="Language">
+    <button data-lang="ja">日本語</button><button data-lang="en">English</button><button data-lang="zh">中文</button><button data-lang="ko">한국어</button>
+  </div>
+  <header>
+    <div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26h36v4a8 8 0 0 1-8 8H14a8 8 0 0 1-8-8z"/><path d="M12 26V12a4 4 0 0 1 8 0"/><path d="M14 38l-2 4"/><path d="M34 38l2 4"/><path d="M27 12c1.5 2 1.5 4 0 6"/><path d="M33 12c1.5 2 1.5 4 0 6"/></svg></div>
+    <div><div class="fac">ホテルビューロー四天王寺</div><h1 id="title"></h1></div>
+  </header>
+  <main id="main"></main>
+  <footer id="foot"></footer>
+</div>
+<script>
+var FAC="ホテルビューロー四天王寺";
+var UI={"ja": {"btns": "ボタンの役割", "warn": "ご注意", "ok": "使える", "ng": "使えない", "trouble": "こんな時は", "foot": "ご不明な点はフロントまでお問い合わせください。", "hub": "設備の使い方", "back": "設備一覧へ"}, "en": {"btns": "What each button does", "warn": "Caution", "ok": "OK", "ng": "Not OK", "trouble": "If something goes wrong", "foot": "If you have any questions, please contact the front desk.", "hub": "How to use the room equipment", "back": "All equipment"}, "zh": {"btns": "按鍵說明", "warn": "注意", "ok": "可使用", "ng": "不可使用", "trouble": "遇到問題時", "foot": "如有任何疑問，請聯絡櫃台。", "hub": "房內設備使用說明", "back": "設備一覽"}, "ko": {"btns": "버튼 설명", "warn": "주의", "ok": "사용 가능", "ng": "사용 불가", "trouble": "이럴 때는", "foot": "궁금한 점은 프런트로 문의해 주세요.", "hub": "객실 설비 사용법", "back": "설비 목록"}};
+var CHIPS={"w_pow": ["電源", "background:#E4E8EB", 1], "w_course": ["コース", "background:#E4E8EB;font-size:12px", 1], "w_start": ["スタート", "background:#8DBACB;font-size:11px", 1], "m_heat": ["暖房", "background:#E8ECEE;font-size:15px", 0], "m_dry": ["衣類<br>乾燥", "background:#E8ECEE", 0], "m_mist": ["ミスト<br>サウナ", "background:#E8ECEE;font-size:11px", 0], "m_vent": ["換気", "background:#E8ECEE;font-size:15px", 0], "m_time": ["▲<br>▼", "background:#E8ECEE", 0], "m_stop": ["停止", "background:#E8ECEE;font-size:15px", 0], "g_pow": ["運転<br>入/切", "background:#EFEBDD", 1], "g_auto": ["自動", "background:#EFEBDD;font-size:15px", 1], "g_talk": ["通話", "background:#EFEBDD;font-size:15px", 1]};
+var DATA={"ja": {"title": "浴室暖房乾燥機", "btns": [["m_heat", "暖房", "浴室を暖めます。押すたびに強／弱が切り替わります。"], ["m_dry", "衣類乾燥", "浴室に干した洗濯物を乾かします。"], ["m_mist", "ミストサウナ", "温かいミストでサウナが楽しめます。"], ["m_vent", "換気", "湿気やにおいを排出します。"], ["m_time", "時間設定 ▲▼", "運転する時間を変更します。残り時間が表示されます。"], ["m_stop", "停止", "運転を止めます。"]], "note": "<b>24時間換気</b>・<b>浴室換気切</b>のボタンは、カビ・結露防止のため操作しないでください。", "sections": [["入浴前に暖める", ["入浴の15〜30分前に<b>暖房</b>を押します。", "<b>▲▼</b>で時間を設定します。", "時間がたつと自動で止まります。"]], ["洗濯物を乾かす", ["浴室の物干しバーに洗濯物を干し、<b>ドアと窓を閉めます</b>。", "<b>衣類乾燥</b>を押し、<b>▲▼</b>で時間を設定します。", "時間がたつと自動で止まります。"]], ["ミストサウナ", ["浴室に入り、ドアを閉めます。", "<b>ミストサウナ</b>を押し、<b>▲▼</b>で時間を設定します（10〜15分が目安）。", "終わったら<b>停止</b>を押し、<b>換気</b>で湿気を逃がします。"]]], "warn": "体調のすぐれない時や飲酒後はミストサウナのご利用をお控えください。小さなお子様だけでのご利用もおやめください。こまめに水分をとってください。運転しない時は、キッチンの給湯器リモコンの「運転」が入になっているかご確認ください。"}, "en": {"title": "Bathroom heater & dryer", "btns": [["m_heat", "暖房 Heat", "Warms the bathroom. Each press switches between strong and weak."], ["m_dry", "衣類乾燥 Clothes dry", "Dries laundry hung in the bathroom."], ["m_mist", "ミストサウナ Mist sauna", "Enjoy a sauna with warm mist."], ["m_vent", "換気 Ventilate", "Removes humidity and odors."], ["m_time", "時間設定 ▲▼ Timer", "Changes the operating time. The remaining time is shown."], ["m_stop", "停止 Stop", "Stops operation."]], "note": "Please do not touch the <b>24時間換気</b> (24-hour ventilation) or <b>浴室換気切</b> buttons. They prevent mold and condensation.", "sections": [["Warm up before bathing", ["15–30 minutes before bathing, press <b>暖房</b> (Heat).", "Set the time with <b>▲▼</b>.", "It stops automatically when the time is up."]], ["Drying laundry", ["Hang laundry on the drying bar and <b>close the door and window</b>.", "Press <b>衣類乾燥</b> (Clothes dry) and set the time with <b>▲▼</b>.", "It stops automatically when the time is up."]], ["Mist sauna", ["Enter the bathroom and close the door.", "Press <b>ミストサウナ</b> (Mist sauna) and set the time with <b>▲▼</b> (10–15 minutes is a guide).", "When finished, press <b>停止</b> (Stop), then <b>換気</b> (Ventilate) to remove humidity."]]], "warn": "Avoid the mist sauna if you feel unwell or have been drinking, and do not let small children use it alone. Drink water often. If the unit does not start, check that 運転 (Power) is on at the water heater panel in the kitchen."}, "zh": {"title": "浴室暖風乾燥機", "btns": [["m_heat", "暖房 暖氣", "讓浴室變暖。每按一次切換強／弱。"], ["m_dry", "衣類乾燥 衣物烘乾", "烘乾晾在浴室的衣物。"], ["m_mist", "ミストサウナ 霧氣三溫暖", "以溫暖霧氣享受三溫暖。"], ["m_vent", "換気 換氣", "排出濕氣與異味。"], ["m_time", "時間設定 ▲▼", "變更運轉時間，會顯示剩餘時間。"], ["m_stop", "停止 停止", "停止運轉。"]], "note": "為防止發霉與結露，請勿操作<b>「24時間換気」</b>及<b>「浴室換気切」</b>按鍵。", "sections": [["入浴前預熱", ["入浴前15〜30分鐘按下<b>「暖房」</b>。", "以<b>▲▼</b>設定時間。", "時間到後會自動停止。"]], ["烘乾衣物", ["將衣物晾在浴室曬衣桿上，並<b>關上門窗</b>。", "按下<b>「衣類乾燥」</b>，以<b>▲▼</b>設定時間。", "時間到後會自動停止。"]], ["霧氣三溫暖", ["進入浴室並關上門。", "按下<b>「ミストサウナ」</b>，以<b>▲▼</b>設定時間（約10〜15分鐘）。", "結束後按<b>「停止」</b>，再按<b>「換気」</b>排出濕氣。"]]], "warn": "身體不適或飲酒後請勿使用霧氣三溫暖，也請勿讓幼童單獨使用。請隨時補充水分。若無法運轉，請確認廚房熱水器控制面板的「運転」是否已開啟。"}, "ko": {"title": "욕실 난방 건조기", "btns": [["m_heat", "暖房 난방", "욕실을 따뜻하게 합니다. 누를 때마다 강/약이 바뀝니다."], ["m_dry", "衣類乾燥 의류 건조", "욕실에 넌 빨래를 말립니다."], ["m_mist", "ミストサウナ 미스트 사우나", "따뜻한 미스트로 사우나를 즐길 수 있습니다."], ["m_vent", "換気 환기", "습기와 냄새를 배출합니다."], ["m_time", "時間設定 ▲▼ 시간 설정", "운전 시간을 바꿉니다. 남은 시간이 표시됩니다."], ["m_stop", "停止 정지", "운전을 멈춥니다."]], "note": "곰팡이·결로 방지를 위해 <b>「24時間換気」</b>와 <b>「浴室換気切」</b> 버튼은 조작하지 마세요.", "sections": [["입욕 전 난방", ["입욕 15~30분 전에 <b>「暖房」</b>을 누릅니다.", "<b>▲▼</b>로 시간을 설정합니다.", "시간이 지나면 자동으로 멈춥니다."]], ["빨래 말리기", ["욕실 빨래 건조봉에 빨래를 널고 <b>문과 창문을 닫습니다</b>.", "<b>「衣類乾燥」</b>를 누르고 <b>▲▼</b>로 시간을 설정합니다.", "시간이 지나면 자동으로 멈춥니다."]], ["미스트 사우나", ["욕실에 들어가 문을 닫습니다.", "<b>「ミストサウナ」</b>를 누르고 <b>▲▼</b>로 시간을 설정합니다 (10~15분 기준).", "끝나면 <b>「停止」</b>를 누르고 <b>「換気」</b>로 습기를 내보냅니다."]]], "warn": "몸이 좋지 않을 때나 음주 후에는 미스트 사우나를 삼가 주시고, 어린이 혼자 사용하지 않도록 해 주세요. 수분을 자주 섭취해 주세요. 작동하지 않으면 주방 온수기 리모컨의 「運転」이 켜져 있는지 확인해 주세요."}};
+
+var st={lang:'ja'};
+function pick(){var h=(location.hash||'').replace('#','');if(UI[h]){st.lang=h;return;}
+ try{var s=localStorage.getItem('guide-lang');if(UI[s]){st.lang=s;return;}}catch(e){}
+ var n=(navigator.language||'ja').toLowerCase();
+ st.lang=n.indexOf('ja')===0?'ja':n.indexOf('zh')===0?'zh':n.indexOf('ko')===0?'ko':'en';}
+function setLangUI(){document.documentElement.lang={ja:'ja',en:'en',zh:'zh-Hant',ko:'ko'}[st.lang];
+ document.body.className=st.lang;
+ document.querySelectorAll('.langs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===st.lang)});}
+document.querySelector('.langs').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;st.lang=b.dataset.lang;try{localStorage.setItem('guide-lang',st.lang)}catch(x){}render();});
+
+function chip(k){var c=CHIPS[k];return '<div class="chip'+(c[2]?' sq':'')+'" style="'+c[1]+'" aria-hidden="true">'+c[0]+'</div>';}
+function render(){setLangUI();var u=UI[st.lang],d=DATA[st.lang];
+ document.getElementById('title').textContent=d.title;
+ document.title=d.title+' | '+FAC;
+ var h='';
+ if(d.btns){h+='<section class="card"><h2>'+u.btns+'</h2>'+d.btns.map(function(b){return '<div class="btn">'+chip(b[0])+'<div><div class="bname">'+b[1]+'</div><div class="bdesc">'+b[2]+'</div></div></div>'}).join('')+(d.note?'<div class="note">'+d.note+'</div>':'')+'</section>';}
+ h+=d.sections.map(function(s){return '<section class="card"><h2>'+s[0]+'</h2><ol>'+s[1].map(function(x){return '<li><div>'+x+'</div></li>'}).join('')+'</ol></section>'}).join('');
+ if(!d.btns&&d.note){h+='<section class="card"><div class="note" style="margin-top:0">'+d.note+'</div></section>';}
+ if(d.marks){h+='<section class="card"><h2>'+d.marksTitle+'</h2><div class="mark ok"><span aria-label="'+u.ok+'">○</span><div>'+d.marks[0]+'</div></div><div class="mark ng"><span aria-label="'+u.ng+'">×</span><div>'+d.marks[1]+'</div></div></section>';}
+ if(d.trouble){h+='<section class="card"><h2>'+u.trouble+'</h2>'+d.trouble.map(function(t){return '<div class="mark"><span style="border-color:var(--step);color:var(--step)">?</span><div>'+t+'</div></div>'}).join('')+'</section>';}
+ h+='<section class="card warn"><b>'+u.warn+'</b><div>'+d.warn+'</div></section>';
+ document.getElementById('main').innerHTML=h;
+ document.getElementById('foot').innerHTML=u.foot+'<br><a class="backlink" href="./index.html">← '+u.back+'</a>';}
+pick();render();
+</script>
+</body>
+</html>
