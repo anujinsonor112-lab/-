@@ -71,6 +71,9 @@ footer{font-size:13px;text-align:center;margin-top:18px;color:var(--ink)}
 .hubgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .hubgrid a{background:var(--card);color:var(--ink);text-decoration:none;padding:18px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:700;font-size:15px;text-align:center;min-height:44px}
 .hubgrid a svg{width:40px;height:40px;stroke:var(--ink)}
+.photo{background:var(--card);padding:12px;margin-bottom:12px}
+.photo img{display:block;width:auto;max-width:100%;max-height:380px;height:auto;margin:0 auto}
+.photo figcaption{font-size:14px;margin-top:8px;color:var(--sub)}
 .backlink{display:inline-block;margin-top:14px;color:var(--ink);font-size:14px}
 </style>
 </head>
@@ -106,12 +109,15 @@ function chip(k){var c=CHIPS[k];return '<div class="chip'+(c[2]?' sq':'')+'" sty
 function render(){setLangUI();var u=UI[st.lang],d=DATA[st.lang];
  document.getElementById('title').textContent=d.title;
  document.title=d.title+' | '+FAC;
- var h='';
+ var h='';var P=typeof PHOTO!=='undefined'?PHOTO:null;
+ function ph(){return '<figure class="photo" style="margin:0 0 12px"><img src="'+P.src+'" alt="'+P.cap[st.lang]+'"><figcaption>'+P.cap[st.lang]+'</figcaption></figure>';}
+ if(P&&P.pos==='top')h+=ph();
  if(d.btns){h+='<section class="card"><h2>'+u.btns+'</h2>'+d.btns.map(function(b){return '<div class="btn">'+chip(b[0])+'<div><div class="bname">'+b[1]+'</div><div class="bdesc">'+b[2]+'</div></div></div>'}).join('')+(d.note?'<div class="note">'+d.note+'</div>':'')+'</section>';}
  h+=d.sections.map(function(s){return '<section class="card"><h2>'+s[0]+'</h2><ol>'+s[1].map(function(x){return '<li><div>'+x+'</div></li>'}).join('')+'</ol></section>'}).join('');
  if(!d.btns&&d.note){h+='<section class="card"><div class="note" style="margin-top:0">'+d.note+'</div></section>';}
  if(d.marks){h+='<section class="card"><h2>'+d.marksTitle+'</h2><div class="mark ok"><span aria-label="'+u.ok+'">○</span><div>'+d.marks[0]+'</div></div><div class="mark ng"><span aria-label="'+u.ng+'">×</span><div>'+d.marks[1]+'</div></div></section>';}
  if(d.trouble){h+='<section class="card"><h2>'+u.trouble+'</h2>'+d.trouble.map(function(t){return '<div class="mark"><span style="border-color:var(--step);color:var(--step)">?</span><div>'+t+'</div></div>'}).join('')+'</section>';}
+ if(P&&P.pos==='trouble')h+=ph();
  h+='<section class="card warn"><b>'+u.warn+'</b><div>'+d.warn+'</div></section>';
  document.getElementById('main').innerHTML=h;
  document.getElementById('foot').innerHTML=u.foot+'<br><a class="backlink" href="./index.html">← '+u.back+'</a>';}
